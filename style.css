@@ -1,101 +1,143 @@
+/* Global colors (CSS variables) so you can reuse them everywhere */
 :root {
-    --dark-color:#1e1e1e;
-    --green-color:#00c896;
-    --white-color:#ffffff;
+    --dark-color:#0f172a;
+    --green-color:#38bdf8;
+    --white-color:#e2e8f0
 }
 * {
+    /* Reset default browser spacing */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 body{
+    /* Page background color */
     background-color: var(--dark-color);
 }
 a{
+    /* Default link style */
     color: var(--white-color);
+    /* removes underline */
     text-decoration: none;
 }
+
+/* ================= NAVBAR ================= */
+
 .navbar{
+     /* Fixed navbar stays at top even when scrolling */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 25px 9%;
+    /* Flex layout: logo left, menu right */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Keeps navbar above other elements */
     z-index: 100;
 }
 .navbar .logo{
+     /* Main brand text */
     font-weight: 700;
     color: var(--green-color);
     font-size: 32px;
-
 }
 .navbar .logo span{
+    /* Second part of logo in different color */
     color: var(--white-color);
 }
 .navbar ul{
+     /* Make menu horizontal */
     display: flex;
 }
 .navbar ul li{
+     /* Spacing between menu items */
     list-style: none;
     margin-left: 35px;
 }
 .navbar ul li a{
+     /* Menu links styling */
     font-size: 18px;
     font-weight: 500;
-    transition: 0.55s;
+    /* Smooth hover animation */
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 .navbar ul li a:hover,
 .navbar ul li.active a{
+    /* Hover or active item color + slight lift */
     color: var(--green-color);
+    transform: translateY(-2px);
 }
+
+/* ================= HERO SECTION ================= */
+
 .home{
+    /* Full screen hero section */
     display: flex;
     align-items: center;
+    /* Full screen height */
     height: 100vh;
     padding: 60px 9% 0;
     color: var(--white-color);
-    gap: 80px;
+     /* Space between text and image */
+    gap: 120px;
 }
 .home-info h1{
+     /* Main title */
     font-size: 50px;
 }
 .home-info h2{
+    /* Subtitle highlight */
     font-size: 32px;
     color: var(--green-color);
 }
 .home-info p{
+    /* Paragraph text spacing */
     font-size: 16px;
     margin: 10px 0 25px;
+    max-width: 600px;
+    line-height: 1.5;
 }
+
+/* ================= BUTTON + SOCIALS ================= */
+
 .home-info .btn-sci{
+    /* Align button and social icons */
     display: flex;
     align-items: center;
 }
 .btn{
+      /* Main button style */
     display: inline-block;
     padding: 10px 30px;
     background: var(--green-color);
     border: 2px solid var(--green-color);
+    /* Pill shape */
     border-radius: 40px;
+    /* Glow effect */
     box-shadow: 0 0 10px var(--green-color);
     font-size: 16px;
     color: var(--dark-color);
     font-weight: 600;
-    transition: all 0.35 ease;
+     /* Smooth hover animation */
+    transition: all 0.3s ease;
 }
 .btn:hover{
+    /* Hover effect: lift + invert style */
     background: transparent;
     color: var(--green-color);
     box-shadow: none;
+    transform: translateY(-3px);
 }
 .home-info .btn-sci .sci{
+    /* Space between button and icons */
     margin-left: 20px;
 }
 .home-info .btn-sci .sci a{
+    /* Social icon circle */
     display: inline-flex;
     padding: 8px;
     border: 2px solid var(--green-color);
@@ -106,54 +148,69 @@ a{
     transition: all 0.3s ease;
 }
 .home-info .btn-sci .sci a:hover{
+    /* Hover: pop + glow */
     background: var(--green-color);
     color: var(--dark-color);
     box-shadow: 0 0 10px var(--green-color);
+    transform: translateY(-3px) scale(1.1);
 }
+
+/* ================= IMAGE CIRCLE ================= */
+
 .home-img .img-box{
+    /* Outer circle container */
     position: relative;
-    width: 32vw;
-    height: 32vw;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Keeps animation inside circle */
     overflow: hidden;
 }
-.home-img .img-box::before{
+.home-img .img-box::before,
+.home-img .img-box::after{
+    /* Animated glowing ring */
     content: "";
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     background: conic-gradient(transparent, transparent, transparent, var(--green-color));
     animation: rotate 10s linear infinite;
+    /* Behind image */
     z-index: 0;
 }
 .home-img .img-box::after{
+     /* Second ring with delay for layered effect */
     animation-delay: -5s;
 }
+/* Rotation animation */
 @keyframes rotate{
     100%{transform: rotate(360deg);}
 }
 .home-img .img-box .img-item{
+    /* Inner circle (holds image) */
     position: relative;
     width: 100%;
     height: 100%;
     background-color: var(--dark-color);
     border-radius: 50%;
-    border: 0.1px solid var(--dark-color);
+    border: 1px solid var(--dark-color);
     display: flex;
     justify-content: center;
+    /* Above animated ring */
     z-index: 1;
     overflow: hidden;
 }
 .home-img .img-box .img-item img{
+     /* Profile image styling */
     position: absolute;
     display: block;
     width: 85%;
     object-fit: cover;
+     /* Moves image slightly down */
     top: 30px;
-    mix-blend-mode: lighten;
 }
