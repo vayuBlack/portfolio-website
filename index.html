@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- Character encoding -->
+    <meta charset="UTF-8">         
+     <!-- Makes website responsive on mobile -->                                                                                 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+    <!-- Font Awesome (for social icons like Facebook, GitHub, etc.) -->                                        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">          
+    <title>Portfolio Website</title>
+    <!-- CSS Link -->
+     <link rel="stylesheet" href="style.css">                                                                         
+</head>
+<body>
+    <!-- ===== NAVBAR (Top menu) ===== -->
+    <nav class="navbar">
+       <!-- Logo (can be styled differently using span) -->                                                                                           
+        <a href="#" class="logo">Port<span>folio</span></a>
+        <!-- Navigation links -->
+        <ul>
+            <!-- Active page (highlighted in CSS) -->
+            <li class="active"><a href="#">Home</a></li>
+            <!-- Links will later scroll to sections -->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+     <!-- ===== HOME SECTION (Main content) ===== -->
+    <section class="home">
+        <!-- LEFT SIDE: Text content -->
+        <div class="home-info">
+            <!-- Your name (main heading) -->
+            <h1>Alen Blazevski</h1>
+             <!-- Your role/job -->
+            <h2>Ich bin Anwendungsentwickler</h2>
+             <!-- Short description -->
+            <p>My skill set consists mostly of Java, JavaScript, Spring Boot, SQL, Flutter, Linux.</p>
+            <!-- Button + Social icons container -->
+            <div class="btn-sci">
+                <!-- Download CV button -->
+                <a href="#" class="btn">Download CV</a>
+                 <!-- Social media icons -->
+                <div class="sci">
+                    <!-- Anchor tag creates a clickable link -->
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- RIGHT SIDE: Image -->
+        <div class="home-img">
+             <!-- Container for styling (circle, border, etc.) -->
+            <div class="img-box">
+                <div class="img-item">
+                    <!-- Your profile image -->
+                    <img src="img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
