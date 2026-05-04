@@ -4,8 +4,10 @@
       <!-- Character encoding -->
     <meta charset="UTF-8">         
      <!-- Makes website responsive on mobile -->                                                                                 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">       
-    <!-- Font Awesome (for social icons like Facebook, GitHub, etc.) -->                                        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <!-- Google Font (Poppins) -->  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <!-- Font Awesome (for social icons like Facebook, GitHub, etc.) -->                                        
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">          
     <title>Portfolio Website</title>
     <!-- CSS Link -->
@@ -21,14 +23,14 @@
             <!-- Active page (highlighted in CSS) -->
             <li class="active"><a href="#">Home</a></li>
             <!-- Links will later scroll to sections -->
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
      <!-- ===== HOME SECTION (Main content) ===== -->
-    <section class="home">
+    <section class="home" id="home">
         <!-- LEFT SIDE: Text content -->
         <div class="home-info">
             <!-- Your name (main heading) -->
@@ -42,7 +44,7 @@
             <!-- Button + Social icons container -->
             <div class="btn-sci">
                 <!-- Download CV button -->
-                <a href="#" class="btn">Download CV</a>
+                <a href="cv.pdf" class="btn" download>Download CV</a>
                  <!-- Social media icons -->
                 <div class="sci">
                     <!-- Anchor tag creates a clickable link -->
@@ -59,10 +61,29 @@
             <div class="img-box">
                 <div class="img-item">
                     <!-- Your profile image -->
-                    <img src="img.png" alt="">
+                    <img src="img/profil.png" alt="Profil picture">
                 </div>
             </div>
         </div>
     </section>
+
+<!-- Placeholder sections for navigation -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>This is the about section.</p>
+</section>
+
+<section id="portfolio">
+    <h2>My Projects</h2>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+</section>
+
 </body>
 </html>

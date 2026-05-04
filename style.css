@@ -2,7 +2,7 @@
 :root {
     --dark-color:#0f172a;
     --green-color:#38bdf8;
-    --white-color:#e2e8f0
+    --white-color:#e2e8f0;
 }
 * {
     /* Reset default browser spacing */
@@ -10,6 +10,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+html {
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
 }
 body{
     /* Page background color */
@@ -123,7 +127,7 @@ a{
     color: var(--dark-color);
     font-weight: 600;
      /* Smooth hover animation */
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 .btn:hover{
     /* Hover effect: lift + invert style */
@@ -145,7 +149,7 @@ a{
     font-size: 20px;
     color: var(--green-color);
     margin: 0 8px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 .home-info .btn-sci .sci a:hover{
     /* Hover: pop + glow */
@@ -213,4 +217,39 @@ a{
     object-fit: cover;
      /* Moves image slightly down */
     top: 30px;
+}
+
+/* ================= SECTION PLACEHOLDERS ================= */
+
+/* This replaces inline styles from HTML (Important change) */
+section {
+    min-height: 100vh;
+
+    padding: 120px 9%;
+
+    color: var(--white-color);
+}
+
+/* Different backgrounds just for visibility (Optional) */
+#about {
+    background: #111c33;
+}
+
+#portfolio {
+    background: #0f1a2e;
+}
+
+#services {
+    background: #111c33;
+}
+
+#contact {
+    background: #0f1a2e;
+}
+
+/* Section headings */
+section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--green-color);
 }
